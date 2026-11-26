@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pin validation</title>
+</head>
+
+<body>
+    <h1>pin validation</h1>
+    <input type="text" id="pin" placeholder="Enter your pin">
+    <button type="button" onclick="validatepin()">Validate
+        pin</button>
+    <p id="result"></p>
+
+</body>
+<script>
+    function validatepin() {
+        let pattern = /^\d{4}$/;
+        let pin = document.getElementById("pin").value;
+        if (pattern.test(pin)) {
+            document.getElementById("result").innerHTML = "valid pin"
+        }
+        else {
+            document.getElementById("result").innerHTML = "invalid pin"
+        }
+    }
+</script>
+
+</html>
